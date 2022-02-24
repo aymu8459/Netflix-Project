@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="page-container">
+    <header id="form-header">
+      <h1 id="form-title">NET<span>FLIX</span></h1> <!--used span to change style of FLIX portion-->
+      <p id="form-description">Thank you for signing up to Netflix. Tell me more about yourself.</p>
+    </header>
+    <main>
+      <section id="survey-form">
+        <form action="result.html" method="get" target="_blank"> 
+          <!--the "get" method is used as an exercise. method "post" would be better for a form like this
+          because the form asks for some sensitive information-->
+          <div class="form-group">
+            <!-- form-group class is used to split the form into groups for structure -->
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="enter your name">
+            <!-- placeholders are used for further instruction -->
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input id="age" type="number" name="age" min="0" placeholder="enter your age">
+          </div> <!-- min attribute doesn't allow input to exceed min requirement -->
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="enter your email">
+          </div>
+
+          <div class="form-group">
+            <label for="content-type">Content Type</label>
+            <select id="content-type" name="content">
+              <option value="" disabled selected>Select your option</option>
+              <!-- have used the disabled and selected attributes for this option to 
+              act as a dropdown menu placeholder-->
+              <option value="movie">Movie</option>
+              <option value="series">Series</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Movie Type</label>
+            <div class="checkbox-group"> 
+            <!--checkbox group has been used for radio and checkbox inputs
+            because their formatting in CSS is a bit more complicated than text input types.
+            For example, the inputs come before the labels.-->
+              <input id="comedy" type="checkbox" name="movie" value="comedy">
+              <label for="comedy">Comedy</label>
+            </div>
+            <div class="checkbox-group">
+              <input id="action" type="checkbox" name="movie" value="action">
+              <label for="action">Action</label>
+            </div>
+            <div class="checkbox-group">
+              <input id="romance" type="checkbox" name="movie" value="romance">
+              <label for="romance">Romance</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="checkbox-group">
+              <input id="male" type="radio" name="gender" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div class="checkbox-group">
+              <input id="female" type="radio" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+            <div class="checkbox-group">
+              <input id="other" type="radio" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" cols="30" rows="10" placeholder="Any comment?"></textarea>
+          </div>
+
+          <div id="form-submit">
+            <button>Send</button>
+          </div>
+
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

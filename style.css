@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* this is a reset */
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-image: url(./background_image_netflix.jpg);
+  color: white;
+  padding: 30px 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#page-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* the rgba includes an alpha(a) parameter
+  which controls for transparency */
+  padding: 20px;
+}
+
+#form-header {
+  text-align: center;
+}
+
+#form-description {
+  font-family: 'Sorts Mill Goudy', serif;
+  /* although the font-size and font-family have 
+  been set in the body and html selectors, because this 
+  styling is selected with an id, it supersedes the prior styling. 
+  This method is used to modify elements throughout this styling */
+  font-size: 23px;
+}
+
+#form-title {
+  padding: 15px;
+  font-family: 'Bowlby One SC', cursive;
+  letter-spacing: 5px;
+}
+
+#form-title span {
+  color: red;
+}
+
+#survey-form {
+  max-width: 500px;
+  margin: 30px auto;
+  /*^this margin gives 30px off the top and bottom
+  and centers the element horizontally */
+  padding: 40px;
+  background-color: black;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label, input {
+  display: block;
+}
+
+.checkbox-group input, .checkbox-group label {
+  display: inline-block;
+}
+
+input, textarea, select {
+  padding: 10px;
+  width: 100%;
+}
+
+.checkbox-group input {
+  width: auto;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+#form-submit {
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  padding: 15px 60px;
+  color: white;
+  border-radius: 50px;
+  /* ^this curves the corners of the button */
+  border: none;
+  cursor: pointer;
+  /* ^this makes a pointer show whenever the cursor is touching
+  the button */
+}
+
+@media (max-width: 768px) {
+  /* this is a media query. At a width of 768px or less,
+  the padding of all elements will revert back to 0. It's used
+  as a breakpoint to save space for smaller screen dimensions */
+  body {
+    padding: 0;
+  }
+}
